@@ -1,0 +1,24 @@
+def get_grade(score):
+	if score >= 90:
+		return "A"
+	elif score >= 80:
+		return "B"
+	elif score >= 70:
+		return "C"
+	elif score >= 60:
+		return "D"
+	else:
+		return "F"
+
+def is_passing(score):
+	return score >= 60
+
+score = int(input("Enter score: "))
+grade = get_grade(score)
+passing = is_passing(score)
+
+print(f"Grade: {grade}")
+if passing:
+	print("Result: Pass")
+else:
+	print("Result: Fail")
